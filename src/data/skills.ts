@@ -104,5 +104,5 @@ export const levelStyles: Record<SkillLevel, { badge: string; dot: string }> = {
   Comfortable: {
     badge: 'bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200',
     dot: 'bg-emerald-500',
-  },
-};
+  } 
+ }

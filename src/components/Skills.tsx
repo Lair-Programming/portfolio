@@ -17,6 +17,82 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 
+import { Sparkles } from 'lucide-react';
+import {
+  skillCategories as dataSkillCategories,
+  levelStyles as dataLevelStyles,
+} from '@/data/skills';
+import { useScrollReveal } from '@/hooks/useScrollReveal';
+
+export default function Skills() {
+  const { ref, isVisible } = useScrollReveal();
+
+  return (
+    <section id="skills" className="section-padding bg-navy-50">
+      <div className="section-container">
+        <div ref={ref} className={`reveal ${isVisible ? 'is-visible' : ''}`}>
+          <div className="text-center">
+            <span className="section-label">
+              <Sparkles className="h-3.5 w-3.5" />
+              Skills
+            </span>
+            <h2 className="section-title mt-4">What I work with</h2>
+            <p className="section-subtitle mx-auto max-w-2xl">
+              The tools and technologies I use to turn ideas into useful,
+              thoughtful digital experiences.
+            </p>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-2">
+            {dataSkillCategories.map((category) => {
+              const CategoryIcon = category.icon;
+
+              return (
+                <article key={category.title} className="card p-6">
+                  <div className="flex items-center gap-3 border-b border-navy-100 pb-4">
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent-50 text-accent-600">
+                      <CategoryIcon className="h-5 w-5" />
+                    </span>
+                    <h3 className="font-display text-lg font-bold text-navy-900">
+                      {category.title}
+                    </h3>
+                  </div>
+
+                  <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                    {category.skills.map((skill) => {
+                      const SkillIcon = skill.icon;
+                      const styles = dataLevelStyles[skill.level];
+
+                      return (
+                        <div key={`${category.title}-${skill.name}`} className="flex gap-3">
+                          <SkillIcon className="mt-0.5 h-5 w-5 shrink-0 text-navy-500" />
+                          <div className="min-w-0">
+                            <div className="flex flex-wrap items-center gap-2">
+                              <h4 className="text-sm font-semibold text-navy-800">
+                                {skill.name}
+                              </h4>
+                              <span className={`rounded-md px-1.5 py-0.5 text-[10px] font-semibold ${styles.badge}`}>
+                                {skill.level}
+                              </span>
+                            </div>
+                            <p className="mt-1 text-xs leading-relaxed text-navy-500">
+                              {skill.description}
+                            </p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export type SkillLevel = 'Learning' | 'Familiar' | 'Comfortable';
 
 export interface Skill {
