@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://lairen.vercel.app/sitemap.xml
+Sitemap:https://portfolio-lair.vercel.app/sitemap.xml
