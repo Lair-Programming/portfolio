@@ -1,9 +1,12 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Basic HTML -->
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Lair Programming</title>
+    <!-- SEO -->
+    <title>Lair Programming | Web Programming Portfolio</title>
 
     <meta
       name="description"
@@ -17,38 +20,78 @@
       content="Lair Programming, En Lair, web programming, web developer, portfolio, full-stack developer, React, TypeScript, JavaScript, UI/UX design"
     />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+
     <meta name="theme-color" content="#0d1b2e" />
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://portfolio-lair.vercel.app/" />
+    <link
+      rel="canonical"
+      href="https://portfolio-lair.vercel.app/"
+    />
 
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/favicon.svg"
+    />
+
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://lairen.vercel.app/" />
-    <meta property="og:title" content="Lair Programming" />
+
+    <meta
+      property="og:url"
+      content="https://portfolio-lair.vercel.app/"
+    />
+
+    <meta
+      property="og:title"
+      content="Lair Programming | Web Programming Portfolio"
+    />
+
     <meta
       property="og:description"
       content="Lair Programming — the personal portfolio of En Lair, a Web Programming student and aspiring Full-Stack Developer."
     />
+
     <meta
       property="og:image"
-      content="https://lairen.vercel.app/og-image.svg"
+      content="https://portfolio-lair.vercel.app/og-image.svg"
     />
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Lair Programming" />
+    <meta
+      property="og:site_name"
+      content="Lair Programming"
+    />
+
+    <meta
+      property="og:locale"
+      content="en_US"
+    />
+
+    <!-- Twitter / X -->
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:title"
+      content="Lair Programming | Web Programming Portfolio"
+    />
+
     <meta
       name="twitter:description"
-      content="Lair Programming — the personal portfolio of En Lair."
-    />
-    <meta
-      name="twitter:image"
-      content="https://lairen.vercel.app/og-image.svg"
+      content="Lair Programming — the personal portfolio of En Lair, a Web Programming student and aspiring Full-Stack Developer."
     />
 
+    <meta
+      name="twitter:image"
+      content="https://portfolio-lair.vercel.app/og-image.svg"
+    />
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       rel="preconnect"
@@ -61,20 +104,38 @@
       rel="stylesheet"
     />
 
+    <!-- Structured Data -->
     <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Lair Programming",
-    "url": "https://lairen.vercel.app/",
-    "description": "Personal portfolio of En Lair, a Web Programming student and aspiring Full-Stack Developer."
-  }
-</script>
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://portfolio-lair.vercel.app/#website",
+            "name": "Lair Programming",
+            "url": "https://portfolio-lair.vercel.app/",
+            "description": "Personal portfolio of En Lair, a Web Programming student and aspiring Full-Stack Developer.",
+            "inLanguage": "en"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://portfolio-lair.vercel.app/#person",
+            "name": "En Lair",
+            "url": "https://portfolio-lair.vercel.app/",
+            "jobTitle": "Web Programming Student",
+            "description": "Web Programming student and aspiring Full-Stack Developer specializing in web development, programming, and UI/UX design."
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
     <div id="root"></div>
 
-    <script type="module" src="/src/main.tsx"></script>
+    <script
+      type="module"
+      src="/src/main.tsx"
+    ></script>
   </body>
 </html>
